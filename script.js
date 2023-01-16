@@ -38,14 +38,14 @@ answerC.addEventListener(("click"), () => {
 
 function endQuiz() {
     if (getScore() < 4) {
-        let sadContent = document.createElement("p");
-        sadContent.textContent = "Are you sure that's what you're looking for?";
-        return main.appendChild(sadContent);
+        main.textContent = "Are you sure that's what you're looking for?";
+        document.getElementById("catPic").style.display = "flex";
     } else {
-        let happyContent = document.createElement("p");
-        happyContent.textContent = "Sounds like you want Eric Hormuth for the job!";
-        return main.appendChild(happyContent);
+        main.textContent = "Sounds like you want Eric Hormuth for the job!";
+        document.getElementById("mePic").style.display = "flex";
+        
     }
+
 }
 
 const questions = [
